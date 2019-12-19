@@ -1,0 +1,11 @@
+sys=tf(1, [0.1,1.6]);
+t=0:0.001:0.5;
+[I,t]=step(sys,t);
+e_o=1.6*I;
+plot(t,I);
+grid;
+xlabel('Time,s');
+ylabel('Current,A');
+t=0:0.001:0.5;
+u=ones(size(t));
+[I,t]=Isim(sys,u,t);
